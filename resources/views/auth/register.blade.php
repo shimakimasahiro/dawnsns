@@ -6,7 +6,7 @@
 
 <h2>新規ユーザー登録</h2>
 
-{{ Form::label('ユーザー名') }}
+{{ Form::label('ユーザ名') }}
 {{ Form::text('username',null,['class' => 'input']) }}
 
 {{ Form::label('メールアドレス') }}
