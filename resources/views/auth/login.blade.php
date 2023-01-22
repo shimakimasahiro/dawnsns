@@ -13,8 +13,14 @@
 <!-- ↑ラベル名 -->
 {{ Form::text('mail',null,['class' => 'input']) }}
 <!-- インプットクラス＝input name=mail type=text value=nullと言いう意味 -->
+ @if($errors->has('mail'))
+ <p>{{ $errors->first('mail') }}</p>
+ @endif
 {{ Form::label('password') }}
 {{ Form::password('password',['class' => 'input']) }}
+ @if($errors->has('password'))
+ <p>{{ $errors->first('password') }}</p>
+ @endif
 
 {{ Form::submit('ログイン') }}
 <!-- ↑ログインボタン -->
