@@ -54,13 +54,16 @@ class LoginController extends Controller
                 ],
             );
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 25715a9f528fa5a2fc7b3b9dac021f1c48503acf
             $data=$request->only('mail','password');
             $username= session()->get('username');
             // ログインが成功したら、トップページへ
             //↓ログイン条件は公開時には消すこと
             if(Auth::attempt($data)){
-                return redirect('/top');
+                return redirect('/top', compact('username'));
             }
         }
         return view("auth.login");
